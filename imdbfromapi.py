@@ -1,3 +1,4 @@
+from pydoc import resolve
 import requests
 import re
 inputmoviename=input("Enter Movie name:")
@@ -34,6 +35,5 @@ try:
     else:
         print("Sorry your movie was not found")
 
-except requests.exceptions.RequestException as e:
+except :
     print("Something went wrong")
-    raise SystemExit(e)
